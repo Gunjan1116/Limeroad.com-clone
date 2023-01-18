@@ -1,4 +1,15 @@
 {
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon index.js"
+  },
+  "keywords": [],
+  "author": "gunjan",
+  "license": "ISC",
+  "description": "Light Fashion Project",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
