@@ -3,6 +3,54 @@
  margin: 0px;
 }
 /* nav bar css */
+#nav_cont{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  
+}
+#nav_left{
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+#nav_left a{
+  color: #183962;
+  text-decoration: none;
+}
+
+#nav_right{
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#search{
+  padding: 5px 40px;
+  border-radius: 10px;
+  border: 1px solid #183962;
+}
+#search:hover{
+  border: 1px solid rgba(0,0,0,.2);
+  cursor: pointer;
+  transform: scale3d(1.01,1.01,1.01);
+}
+#cart{
+  font-size: 20px;
+  color: #183962;
+}
+#cart:hover{
+  cursor: pointer;
+  transform: scale3d(1.01,1.01,1.01)
+}
+#user{
+  font-size: 20px;
+  color: #183962
+}
+#user:hover{
+  cursor: pointer;
+  transform: scale3d(1.01,1.01,1.01)
+}
 /* swiper css  */
 .swiper {
     width: 100%;
