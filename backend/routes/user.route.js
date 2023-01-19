@@ -53,6 +53,15 @@ userRoute.post("/login",async(req,res)=>{
         res.json(error.message);
     }
 })
+userRoute.get("/",async(req,res)=>{
+    try {
+        const reqData=await Usermodel.find();
+        res.json(reqData);
+    } catch (error) {
+        console.log(error);
+        res.json(error.message);
+    }
+})
 // {
 //     "name":"rakesh",
 //     "email":"rakesh@gmail.com",
