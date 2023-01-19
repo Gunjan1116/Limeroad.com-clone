@@ -2,7 +2,9 @@ const express=require("express");
 const cors=require("cors");
 const { connection } = require("./config/db");
 const {userRoute}=require("./routes/user.route");
-const {homeproductRoute}=require("./routes/homeLanding.route")
+const {homeproductRoute}=require("./routes/homeLanding.route");
+const {mensRoute}=require("./routes/mens.route");
+const {womensRoute}=require("./routes/womens.route");
 require("dotenv").config();
 
 const app=express();
@@ -15,7 +17,9 @@ app.use(express.json());
 app.get("/",(req,res)=>{
     res.json(`Welcome to home page of Light Fashion`)
 })
-app.use("/homepageproduct",homeproductRoute)
+app.use("/homepageproduct",homeproductRoute);
+app.use("/mens",mensRoute);
+app.use("/womens",womensRoute);
 app.use("/users",userRoute);
 
 app.listen(process.env.port,async()=>{
