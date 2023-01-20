@@ -1,0 +1,21 @@
+/* fetch data css */
+#all_data{
+    width: 100%;
+    margin: auto;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    background-color: rgba(0,0,0,.2);
+    text-align: center;
+}
+#all_data div:hover{
+    transform: scale3d(1.05,1.05,1.05);
+}
+
+#all_data h4{
+    color: #183962; 
+}
+#all_data p{
+    color: rgb(88, 85, 85);
+}
