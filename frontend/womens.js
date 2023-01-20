@@ -13,7 +13,7 @@ filt.addEventListener("change",()=>{
 
 async function getFilterdata(value){
     try {
-      const res=await fetch(`http://localhost:5006/mens?title=${value}`,{
+      const res=await fetch(`http://localhost:5006/womens?title=${value}`,{
         method:"GET",
         headers:{
             'Content-Type':'application/json'
@@ -31,7 +31,7 @@ async function getFilterdata(value){
 }
 async function getAlldata(){
   try {
-    const res=await fetch(`http://localhost:5006/mens`,{
+    const res=await fetch(`http://localhost:5006/womens`,{
       method:"GET",
       headers:{
           'Content-Type':'application/json'
