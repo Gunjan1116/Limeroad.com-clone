@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="nav_cont">
+        <div id="logo">
+            <a href="index.html"><img width="45%" src="project logo.jpg"/></a>
+        </div>
+       <div id="nav_left">
+        
+       <a href="womens.html">WOMENS</a>
+       <a href="mens.html">MENS</a>
+       <a href="index.html">KIDS</a>
+       <a href="index.html">HOME</a>
+       <a href="index.html">OFFERS</a>
+       </div>
+       <div id="nav_right">
+        <!-- <div id="pay"><i class="fa fa-cc-visa"></i><p>Pay Now</p></div> -->
+        <div id="cart"><i class="fa fa-shopping-cart"></i><p>Cart</p></div>
+        <div id="user"><i class="fa fa-user"></i><p>User</p></div>
+       </div>
+    </div>
+    <div id="bodyCont">
+        <div id="topBody">
+            <div><h3>Choose your payment method</h3></div>
+            <div><select id="pay">
+                <option value="">Payment Method</option>
+                <option value="card">Debit/Credit Card</option>
+                <option value="wallet">Wallet</option>
+                <option value="upi">UPI</option>
+                <option value="net">Net banking</option>
+                <option value="cash">Cash On Delivery</option>
+            </select></div>
+        </div>
+        <div id="midBody">
+            <div id="addBody">
+                <!-- will be appended from js page of payment -->
+                <input id="first" type="number" placeholder="Card Number"/><br/>
+                <input id="second" placeholder="Valid through(MM/YY)"/><br/>
+                <input id="third" type="number" placeholder="CVV"/><br/>
+                <input id="fouth" type="text" placeholder="Name On Card"/><br/>
+                <p>This transaction you make is totally secure. <br/>We don't save your CVV number<p/>
+                <button id="btn">PAY NOW</button>
+            </div>
+            
+        </div>
+     </div> 
+</body>
+</html>
+<script src="payment.js"></script>

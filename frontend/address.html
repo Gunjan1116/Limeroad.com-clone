@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Page</title>
+    <link rel="stylesheet" href="address.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="nav_cont">
+        <div id="logo">
+            <a href="index.html"><img width="45%" src="project logo.jpg"/></a>
+        </div>
+       <div id="nav_left">
+        
+       <a href="womens.html">WOMENS</a>
+       <a href="mens.html">MENS</a>
+       <a href="index.html">KIDS</a>
+       <a href="index.html">HOME</a>
+       <a href="index.html">OFFERS</a>
+       </div>
+       <div id="nav_right">
+        <div id="pay"><i class="fa fa-cc-visa"></i><p>Pay Now</p></div>
+        <div id="cart"><i class="fa fa-shopping-cart"></i><p>Cart</p></div>
+        <div id="user"><i class="fa fa-user"></i><p>User</p></div>
+       </div>
+    </div>
+    <div id="all_entry">
+        <form autocomplete="on">
+            <h1>Address Details</h1>
+            <p>
+                <label for="countryName"  >Country</label><br/>
+                <input id="country" required="required" type="text"  />
+            </p>
+            <p>
+                <label for="fullName"   >Full Name</label><br/>
+                <input id="firstname"  required="required" type="text" />
+            </p>
+            <p>
+                <label for="mobileNo"   >Mobile Number</label><br/>
+                <input id="mobileNo"  required="required" type="number" />
+            </p>
+            <p>
+                <label for="Pin"   >Pincode/Zipcode</label><br/>
+                <input id="pinCode"  required="required" type="number" />
+            </p>
+            <p>
+                <label for="city"  >City</label><br/>
+                <input id="city"  required="required" type="text" />
+            </p>
+            <p>
+                <label for="state" >State</label><br/>
+                <input id="state" required="required" type="text" />
+            </p>
+            <p>
+                <label for="flatNo" >Flat No/Building,Street Name</label><br/>
+                <input id="flatNo"  required="required" type="text" />
+            </p>
+            <p>
+                <label for="area" >Area/Locality</label><br/>
+                <input id="area" required="required" type="text" />
+            </p>
+            <p>
+                <label for="landmark" >Landmark(optional)</label><br/>
+                <input id="landmark" required="required" type="text" />
+            </p>
+            <p class="addressButton">
+                <input type="submit" value="SAVE ADDRESS"/>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
+<script src="address.js"></script>

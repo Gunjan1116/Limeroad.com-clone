@@ -118,10 +118,43 @@ function render(arr){
       let p=document.createElement("p");
       p.innerText=el.author;
       let btn=document.createElement("button");
-      btn.innerText="Add to Cart"
+      btn.innerText="Add to Cart";
+      btn.addEventListener("click",()=>{
+        let obj={
+          title:el.title,
+          imageLink:el.imageLink,
+          price:el.price,
+          author:el.author
+        }
+        addToCart(obj);
+      })
       div.append(img,h4,p,btn);
       cont.append(div);
   })
+}
+async function addToCart(obj){
+  const token=sessionStorage.getItem("token");
+  if(token==undefined){
+    alert("Please login First!")
+  }else{
+    try {
+      const res=await fetch("http://localhost:5006/cart/add",{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json",
+            Authorization:sessionStorage.getItem("token")
+        },
+        body:JSON.stringify(obj)
+      })
+      const out=await res.json();
+      if(out=="Data add successfully!"){
+        alert("Product added to the cart!")
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
 }
 const cart_btn=document.getElementById("cart");
 cart_btn.addEventListener("click",()=>{

@@ -1,0 +1,115 @@
+* {
+    padding: 0px;
+    margin: 0px;
+   }
+   /* nav bar css */
+   #nav_cont{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap: 20px;
+     
+   }
+   #nav_left{
+     margin-top: 70px;
+     display: flex;
+     justify-content: space-evenly;
+     
+   }
+   #nav_left a{
+     color: #183962;
+     text-decoration: none;
+   }
+   
+   #nav_right{
+     margin-top: 70px;
+     display: flex;
+     justify-content: space-evenly;
+   }
+   #search{
+     padding: 5px 40px;
+     border-radius: 10px;
+     border: 1px solid #183962;
+   }
+   #search:hover{
+     border: 1px solid rgba(0,0,0,.2);
+     cursor: pointer;
+     transform: scale3d(1.01,1.01,1.01);
+   }
+   #cart{
+     font-size: 20px;
+     color: #183962;
+   }
+   #pay{
+    font-size: 20px;
+     color: #183962;
+   }
+   #pay:hover{
+     cursor: pointer;
+     transform: scale3d(1.01,1.01,1.01)
+   }
+   #cart:hover{
+     cursor: pointer;
+     transform: scale3d(1.01,1.01,1.01)
+   }
+   #user{
+     font-size: 20px;
+     color: #183962
+   }
+   #user:hover{
+     cursor: pointer;
+     transform: scale3d(1.01,1.01,1.01)
+   }
+   /* body css */
+   #bodyCont{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#topBody{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    text-align: center; 
+    padding-bottom: 20px; 
+}
+#topBody h3{
+    color: #183962;
+}
+#midBody{
+    margin: auto;
+    width: 52%;
+    height: auto;
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+ #addBody{
+    text-align: center;
+    margin: auto;
+ }
+ #addBody input{
+    margin-top: 20px;
+    padding: 20px 80px;
+    border-radius: 10px;
+    border: 1px solid gray;
+ }
+ #addBody p{
+    color: gray;
+ }
+ #addBody input:hover{
+    border: 1px solid #183962;
+    transform: scale3d(1.1,1.1,1.1);
+ }
+ #addBody button{
+    margin-top: 10px;
+    padding: 20px 140px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: #183962;
+    color: white;
+    margin-bottom: 10px;
+ }
+ #addBody button:hover{
+    border: 1px solid gray;
+    background-color: darkgray;
+    transform: scale3d(1.1,1.1,1.1);
+    cursor: pointer;
+ }
