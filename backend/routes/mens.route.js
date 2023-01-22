@@ -66,7 +66,7 @@ mensRoute.patch("/update/:id",async(req,res)=>{
         res.json(error.message);
     }
 })
-mensRoute.patch("/remove/:id",async(req,res)=>{
+mensRoute.delete("/remove/:id",async(req,res)=>{
     const ID=req.params.id
     try {
         const reqData=await Mensmodel.findByIdAndDelete({_id:ID});
