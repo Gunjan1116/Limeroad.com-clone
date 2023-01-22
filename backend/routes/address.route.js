@@ -6,7 +6,7 @@ const addressRoute=express.Router();
 addressRoute.get("/",async(req,res)=>{
     
     try {
-        const requiredData=await Addressmodel.find(que);
+        const requiredData=await Addressmodel.find();
         res.json(requiredData);
     } catch (error) {
         console.log(error);
