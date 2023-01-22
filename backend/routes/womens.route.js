@@ -4,33 +4,36 @@ const womensRoute=express.Router();
 
 
 womensRoute.get("/",async(req,res)=>{
-    const {title,author,sortby}=req.query
+    const {title,author,sortby,q}=req.query
     let que={};
     let sortque={}
-    if(title!=undefined&&author!=undefined&&sortby!=undefined){
+    if(title!=undefined&&author!=undefined&&sortby!=undefined&&q==undefined){
         que={title,author}
         sortque={price:sortby}
-    }else if(title==undefined&&author!=undefined&&sortby!=undefined){
+    }else if(title==undefined&&author!=undefined&&sortby!=undefined&&q==undefined){
         que={author}
         sortque={price:sortby}
-    }else if(title!=undefined&&author==undefined&&sortby!=undefined){
+    }else if(title!=undefined&&author==undefined&&sortby!=undefined&&q==undefined){
         que={title}
         sortque={price:sortby}
-    }else if(title!=undefined&&author!=undefined&&sortby==undefined){
+    }else if(title!=undefined&&author!=undefined&&sortby==undefined&&q==undefined){
         que={title,author}
         sortque={};
-    }else if(title==undefined&&author==undefined&&sortby!=undefined){
+    }else if(title==undefined&&author==undefined&&sortby!=undefined&&q==undefined){
         que={};
         sortque={price:sortby}
-    }else if(title==undefined&&author!=undefined&&sortby==undefined){
+    }else if(title==undefined&&author!=undefined&&sortby==undefined&&q==undefined){
         que={author}
         sortque={};
-    }else if(title!=undefined&&author==undefined&&sortby==undefined){
+    }else if(title!=undefined&&author==undefined&&sortby==undefined&&q==undefined){
         que={title};
         sortque={};
-    }else if(title==undefined&&author==undefined&&sortby==undefined){
+    }else if(title==undefined&&author==undefined&&sortby==undefined&&q==undefined){
         que={};
         sortque={};
+    }else if(title==undefined&&author==undefined&&sortby==undefined&&q!=undefined){
+        sortque={};
+        que.author={'$regex':q,'$options':'i'};
     }
     try {
         const requiredData=await Womensmodel.find(que).sort(sortque);
