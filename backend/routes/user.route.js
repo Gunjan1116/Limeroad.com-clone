@@ -40,7 +40,12 @@ userRoute.post("/login",async(req,res)=>{
             bcrypt.compare(password,reqireData[0].password,(err,result)=>{
                 if(result){
                     var token=jwt.sign({email,userID:reqireData[0]._id},process.env.key);
-                    res.json({"message":"Login Successful!","token":token});
+                    if(email=="gunjan@gmail.com"){
+                        res.json({"message":"Login Successful to Admin page!","token":token}); 
+                    }else{
+                        res.json({"message":"Login Successful!","token":token});
+                    }
+                    
                 }else{
                     res.json("Wrong Credentials!")
                 }
