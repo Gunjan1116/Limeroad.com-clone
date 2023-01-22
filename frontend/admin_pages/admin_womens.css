@@ -1,0 +1,124 @@
+/* nav bar css */
+#nav_cont{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    
+  }
+  #nav_left{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  #nav_left a{
+    color: #183962;
+    text-decoration: none;
+  }
+  
+  #nav_right{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #search{
+    padding: 5px 40px;
+    border-radius: 10px;
+    border: 1px solid #183962;
+  }
+  #search:hover{
+    border: 1px solid rgba(0,0,0,.2);
+    cursor: pointer;
+    transform: scale3d(1.01,1.01,1.01);
+  }
+  #search_btn{
+    border-radius: 10px;
+    border: 0px solid white;
+    padding: 5px 8px;
+    color: gray;
+   }
+   #search_btn:hover{
+    cursor: pointer;
+    transform: scale3d(1.01,1.01,1.01);
+    
+   }
+ 
+  #user{
+    font-size: 15px;
+    color: #183962
+  }
+  #user:hover{
+    cursor: pointer;
+    transform: scale3d(1.01,1.01,1.01)
+  }
+  /* mens product css  */
+  h1{
+    text-align: center;
+    color: #183962;
+  }
+  #womens{
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+  }
+  #left{
+    border: 1px solid yellow;
+    width: 20%;
+    height: auto;
+  }
+  #left input{
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid #183962;
+  }
+  #Add{
+    padding: 10px 65px;
+    border-radius: 10px;
+    border: 1px solid #183962;
+  }
+  #Add:hover{
+    background-color: #183962;
+    cursor: pointer;
+    color: white;
+  }
+  #right{
+    border: 1px solid orangered;
+    width: 80%;
+    height: auto;
+  }
+  /* fetch data css */
+
+#right{
+    width: 85%;
+    margin: auto;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    background-color: rgba(0,0,0,.2);
+    text-align: center;
+}
+#right div:hover{
+    transform: scale3d(1.05,1.05,1.05);
+}
+
+#right h4{
+    color: #183962; 
+}
+#right p{
+    color: rgb(88, 85, 85);
+}
+#right button{
+    border: 1px solid #183962;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+#right button:hover{
+    cursor: pointer;
+    background-color: #183962;
+    color: white;
+}
+  
