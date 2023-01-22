@@ -4,8 +4,15 @@ const homeproductRoute=express.Router();
 
 
 homeproductRoute.get("/",async(req,res)=>{
+    const {q}=req.query;
+    let que={};
+    if(q!=undefined){
+        que.title={'$regex':q,'$options':'i'};
+    }else{
+        que={};
+    }
     try {
-        const requiredData=await Homepageproductmodel.find();
+        const requiredData=await Homepageproductmodel.find(que);
         res.json(requiredData);
     } catch (error) {
         console.log(error);

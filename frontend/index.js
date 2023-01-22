@@ -1,5 +1,11 @@
 let cont=document.querySelector("#data");
-
+const search=document.querySelector("#search");
+const search_btn=document.querySelector("#search_btn")
+search_btn.addEventListener("click",()=>{
+  let value=search.value;
+  //console.log(value);
+  getSearchData(value);
+})
 async function getAlldata(){
     try {
       const res=await fetch("http://localhost:5006/homepageproduct/",{
@@ -19,7 +25,24 @@ async function getAlldata(){
     }
 }
 getAlldata()
-
+async function getSearchData(value){
+  try {
+    const res=await fetch(`http://localhost:5006/homepageproduct?q=${value}`,{
+      method:"GET",
+      headers:{
+          'Content-Type':'application/json'
+      }
+    })
+    if(res.ok){
+      const out=await res.json();
+      console.log(out);
+      render(out);
+    }
+  } catch (error) {
+      console.log(error);
+      console.log(error.message);
+  }
+}
     
 // title:{type:String,require:true},
 //     imageLink:{type:String,require:true},
@@ -27,6 +50,7 @@ getAlldata()
 //     followers
 
 function render(arr){
+  cont.innerHTML=null;
     arr.forEach((el)=>{
         let div=document.createElement("div");
         let h3=document.createElement("h3");

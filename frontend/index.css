@@ -35,6 +35,17 @@
   cursor: pointer;
   transform: scale3d(1.01,1.01,1.01);
 }
+#search_btn{
+  border-radius: 10px;
+  border: 0px solid white;
+  padding: 5px 8px;
+  color: gray;
+ }
+ #search_btn:hover{
+  cursor: pointer;
+  transform: scale3d(1.01,1.01,1.01);
+  
+ }
 #cart{
   font-size: 20px;
   color: #183962;
