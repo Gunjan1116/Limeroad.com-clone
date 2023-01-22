@@ -5,11 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All mens Product</title>
+    <link rel="stylesheet" href="admin_mens.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div id="nav_cont">
+        <div id="logo">
+            <a href="index.html"><img width="45%" src="../project logo.jpg"/></a>
+        </div>
+       <div id="nav_left">
+        
+       <a href="./admin_pages/admin_womens.html">WOMENS PRODUCT</a>
+       <a href="./admin_pages/admin_mens.html">MENS PRODUCT</a>
+       
+       </div>
+       <div id="nav_right">
+        <div><i class="fa fa-search"></i><input id="search" placeholder="Search"/>
+            <button id="search_btn">Search</button></div>
+        <div id="user"><i class="fa fa-user"></i><span>Admin</span></div>
+       </div>
+    </div>
     <h1>All Mens Product</h1>
+    
     <div id="mens">
-        <!-- All data from backend -->
+        <div id="left">
+            <input id="title" type="text" placeholder="title" />
+            <input id="imageLink" type="text" placeholder="ImageLink" />
+            <input id="price" type="text" placeholder="Price" />
+            <input id="author" type="text" placeholder="Author" />
+            <hr>
+            <button id="Add">Add Mens Product</button>
+        </div>
+        
+        <div id="right">
+            <!-- All data from backend -->
+        </div>
+        
     </div>
 </body>
 </html>
+<script src="admin_mens.js"></script>
