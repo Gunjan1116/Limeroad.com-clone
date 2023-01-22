@@ -30,7 +30,7 @@ async function postdata(obj){
         sessionStorage.setItem("token",out.token)
         if(out.message=="Login Successful!"){
             alert('You are successfully login!');
-            //window.location.href="index.html"
+            window.location.href="index.html"
         }else if(out=="Wrong Credentials!"){
             alert('Wrong Credentials!')
         }else{
