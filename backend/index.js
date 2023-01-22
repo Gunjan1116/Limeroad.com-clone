@@ -6,6 +6,7 @@ const {homeproductRoute}=require("./routes/homeLanding.route");
 const {mensRoute}=require("./routes/mens.route");
 const {womensRoute}=require("./routes/womens.route");
 const {cartRoute}=require("./routes/cart.route");
+const {addressRoute}=require("./routes/address.route");
 const {authentication}=require("./middlewares/authentication.middleware");
 require("dotenv").config();
 
@@ -25,6 +26,7 @@ app.use("/womens",womensRoute);
 app.use("/users",userRoute);
 app.use(authentication);
 app.use("/cart",cartRoute);
+app.use("/address",addressRoute);
 app.listen(process.env.port,async()=>{
     try {
         await connection
