@@ -7,7 +7,7 @@ input_form_btn.addEventListener("submit",async (e)=>{
         for(let i=0;i<all_input_tag.length-1;i++){
             obj[all_input_tag[i].id]=all_input_tag[i].value;
         }
-        let res=await fetch("http://localhost:5006/address/add",{
+        let res=await fetch("https://lazy-gold-gopher-wig.cyclic.app/address/add",{
             method:'POST',
             headers:{
                 'Content-Type':"application/json",

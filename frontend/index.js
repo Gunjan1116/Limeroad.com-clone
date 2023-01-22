@@ -8,7 +8,7 @@ search_btn.addEventListener("click",()=>{
 })
 async function getAlldata(){
     try {
-      const res=await fetch("http://localhost:5006/homepageproduct/",{
+      const res=await fetch("https://lazy-gold-gopher-wig.cyclic.app/homepageproduct/",{
         method:"GET",
         headers:{
             'Content-Type':'application/json'
@@ -27,7 +27,7 @@ async function getAlldata(){
 getAlldata()
 async function getSearchData(value){
   try {
-    const res=await fetch(`http://localhost:5006/homepageproduct?q=${value}`,{
+    const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/homepageproduct?q=${value}`,{
       method:"GET",
       headers:{
           'Content-Type':'application/json'

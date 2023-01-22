@@ -16,7 +16,7 @@ search_btn.addEventListener("click",()=>{
 })
 async function getAlluserData(){
     try {
-        const res=await fetch("http://localhost:5006/users/",{
+        const res=await fetch("https://lazy-gold-gopher-wig.cyclic.app/users/",{
           method:"GET",
           headers:{
               'Content-Type':'application/json'
@@ -35,7 +35,7 @@ async function getAlluserData(){
 getAlluserData();
 async function getAlluserAddress(){
     try {
-        const res=await fetch("http://localhost:5006/address/",{
+        const res=await fetch("https://lazy-gold-gopher-wig.cyclic.app/address/",{
           method:"GET",
           headers:{
               'Content-Type':'application/json',
@@ -83,7 +83,7 @@ function render(arr){
 }
 async function deleteReqData(ID){
     try {
-        const res=await fetch(`http://localhost:5006/users/remove/${ID}`,{
+        const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/users/remove/${ID}`,{
           method:"DELETE",
           headers:{
               'Content-Type':'application/json',
@@ -135,7 +135,7 @@ function renderAddress(arr){
 }
 async function getSearchData(value){
     try {
-      const res=await fetch(`http://localhost:5006/users?q=${value}`,{
+      const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/users?q=${value}`,{
         method:"GET",
         headers:{
             'Content-Type':'application/json'

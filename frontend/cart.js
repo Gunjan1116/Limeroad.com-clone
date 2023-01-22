@@ -17,7 +17,7 @@ async function getAllCartData(){
     alert("Please login First!")
   }else{
     try {
-      const res=await fetch("http://localhost:5006/cart/",{
+      const res=await fetch("https://lazy-gold-gopher-wig.cyclic.app/cart/",{
         method:"GET",
         headers:{
             "Content-type":"application/json",
@@ -70,7 +70,7 @@ async function deleteReqData(ID){
     alert("Please login First!")
   }else{
     try {
-      const res=await fetch(`http://localhost:5006/cart//remove/${ID}`,{
+      const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/remove/${ID}`,{
         method:"DELETE",
         headers:{
             "Content-type":"application/json",
