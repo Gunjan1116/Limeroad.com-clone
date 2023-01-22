@@ -59,6 +59,10 @@
      cursor: pointer;
      transform: scale3d(1.01,1.01,1.01)
    }
+   /* price and item display css */
+   #display{
+    text-align: center;
+   }
    /* fetched data from backend */
    #cont{
     width: 85%;
@@ -70,6 +74,7 @@
     background-color: rgba(0,0,0,.2);
     text-align: center;
 }
+
 #cont div:hover{
     transform: scale3d(1.05,1.05,1.05);
 }
