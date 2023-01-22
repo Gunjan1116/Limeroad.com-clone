@@ -49,7 +49,9 @@ function render(arr){
       p.innerText=el.author;
       let btn=document.createElement("button");
       btn.innerText="Delete";
-     
+      btn.addEventListener("click",()=>{
+        deleteReqData(el._id);
+      })
       
       div.append(img,h4,p,btn);
       cont.append(div);
@@ -60,5 +62,32 @@ function render(arr){
     sum+=arr[i].price;
   }
   document.querySelector("#items").innerText=`Count:${count}`
-  document.querySelector("#price").innerText=`Total Price:${sum}`
+  document.querySelector("#price").innerText=`Total Price:₹${sum}`
+}
+async function deleteReqData(ID){
+  const token=sessionStorage.getItem("token");
+  if(token==undefined){
+    alert("Please login First!")
+  }else{
+    try {
+      const res=await fetch(`http://localhost:5006/cart//remove/${ID}`,{
+        method:"DELETE",
+        headers:{
+            "Content-type":"application/json",
+            Authorization:sessionStorage.getItem("token")
+        },
+        
+      })
+      const out=await res.json();
+      if(out==`Mens data of id ${ID} was deleted successfully!`){
+        alert("Product deleted for your cart!");
+        getAllCartData()
+      }else{
+        alert("Something went wrong!")
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
 }
