@@ -26,7 +26,7 @@ search_btn.addEventListener("click",()=>{
 })
 async function getAlldata(){
     try {
-      const res=await fetch(`http://localhost:5006/womens`,{
+      const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/womens`,{
         method:"GET",
         headers:{
             'Content-Type':'application/json'
@@ -44,7 +44,7 @@ async function getAlldata(){
   }
   async function getSearchData(value){
     try {
-      const res=await fetch(`http://localhost:5006/womens?q=${value}`,{
+      const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/womens?q=${value}`,{
         method:"GET",
         headers:{
             'Content-Type':'application/json'
@@ -86,7 +86,7 @@ async function getAlldata(){
     
     
       try {
-        const res=await fetch(`http://localhost:5006/womens/remove/${ID}`,{
+        const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/womens/remove/${ID}`,{
           method:"DELETE",
           headers:{
               "Content-type":"application/json"
@@ -109,7 +109,7 @@ async function getAlldata(){
   }
   async function addNewProduct(value){
     try {
-      const res=await fetch(`http://localhost:5006/womens/add`,{
+      const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/womens/add`,{
         method:"POST",
         headers:{
             'Content-Type':'application/json'

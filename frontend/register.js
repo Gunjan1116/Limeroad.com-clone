@@ -22,7 +22,7 @@ sign_btn.addEventListener("click",()=>{
 })
 async function postdata(obj){
     try {
-        let res=await fetch("http://localhost:5006/users/register",{
+        let res=await fetch("https://lazy-gold-gopher-wig.cyclic.app/users/register",{
             method:"POST",
             headers:{
                 "Content-type":"application/json"
