@@ -59,9 +59,26 @@ userRoute.post("/login",async(req,res)=>{
     }
 })
 userRoute.get("/",async(req,res)=>{
+    const {q}=req.query
+    let que={};
+    if(q!=undefined){
+        que.name={'$regex':q,'$options':'i'}
+    }else{
+        que={};
+    }
     try {
-        const reqData=await Usermodel.find();
+        const reqData=await Usermodel.find(que);
         res.json(reqData);
+    } catch (error) {
+        console.log(error);
+        res.json(error.message);
+    }
+})
+userRoute.delete("/remove/:id",async(req,res)=>{
+    const ID=req.params.id;
+    try {
+        const reqData=await Usermodel.findByIdAndDelete({_id:ID});
+        res.json(`user of id${ID} is deleted`);
     } catch (error) {
         console.log(error);
         res.json(error.message);

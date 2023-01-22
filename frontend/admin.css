@@ -31,7 +31,17 @@
     cursor: pointer;
     transform: scale3d(1.01,1.01,1.01);
   }
- 
+  #search_btn{
+    border-radius: 10px;
+    border: 0px solid white;
+    padding: 5px 8px;
+    color: gray;
+   }
+   #search_btn:hover{
+    cursor: pointer;
+    transform: scale3d(1.01,1.01,1.01);
+    
+   }
  
   #user{
     font-size: 15px;
@@ -43,7 +53,7 @@
   }
   /* body cont css start */
   #body_cont{
-    border: 1px solid red;
+    border: 1px solid white;
     width: 100%;
     margin: auto;
     height: auto;
@@ -51,7 +61,8 @@
     justify-content: space-between;
   }
   #body_left{
-    border: 1px solid blue;
+    border: 1px solid gray;
+    border-radius: 10px;
     width: 20%;
     height: auto;
     display: flex;
@@ -65,8 +76,14 @@
     border: 1px solid #183962;
     margin-bottom: 10px;
   }
+  #body_left button:hover{
+    cursor: pointer;
+    background-color: #183962;
+    color: white;
+  }
   #body_right{
-    border: 1px solid green;
+    border: 1px solid gray;
+    border-radius: 10px;
     width: 75%;
     
     height: auto;
@@ -82,7 +99,13 @@
     border-radius: 10px;
     border: 1px solid #183962;
   }
+  #body_right button:hover{
+    cursor: pointer;;
+    background-color: #183962;
+    color: white;
+  }
   #body_right div{
     
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
   }

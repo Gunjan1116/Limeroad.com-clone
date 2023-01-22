@@ -4,9 +4,16 @@ const addressRoute=express.Router();
 
 
 addressRoute.get("/",async(req,res)=>{
+    const {q}=req.query
+    let que={};
+    if(q!=undefined){
+        que.name={'$regex':q,'$options':'i'}
+    }else{
+        que={};
+    }
     
     try {
-        const requiredData=await Addressmodel.find();
+        const requiredData=await Addressmodel.find(que);
         res.json(requiredData);
     } catch (error) {
         console.log(error);
