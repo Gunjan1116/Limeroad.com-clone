@@ -44,8 +44,9 @@ cartRoute.patch("/update/:id",async(req,res)=>{
         res.json(error.message);
     }
 })
-cartRoute.patch("/remove/:id",async(req,res)=>{
+cartRoute.delete("/remove/:id",async(req,res)=>{
     const ID=req.params.id;
+    const payload=req.body;
     const cartItem=await Cartmodel.findOne({_id:ID});
     const userID_in_cart=cartItem.userID;
     const userID_making_req=payload.userID;
