@@ -139,5 +139,5 @@ window.addEventListener("load",(e)=>{
   })
 const user_btn=document.getElementById("user");
 user_btn.addEventListener("click",()=>{
-  window.location.href="admin.html";
+  window.location.href="./admin.html";
 })
