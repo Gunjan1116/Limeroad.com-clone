@@ -70,7 +70,7 @@ async function deleteReqData(ID){
     alert("Please login First!")
   }else{
     try {
-      const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/remove/${ID}`,{
+      const res=await fetch(`https://lazy-gold-gopher-wig.cyclic.app/cart/remove/${ID}`,{
         method:"DELETE",
         headers:{
             "Content-type":"application/json",
